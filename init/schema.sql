@@ -18,8 +18,8 @@ CREATE TABLE "attendees" (
 CREATE TABLE "check_ins" (
     "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
     "created_at" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    "attendeeId" TEXT NOT NULL,
-    CONSTRAINT "check_ins_attendeeId_fkey" FOREIGN KEY ("attendeeId") REFERENCES "attendees" ("id") ON DELETE RESTRICT ON UPDATE CASCADE
+    "attendee_id" TEXT NOT NULL,
+    CONSTRAINT "check_ins_attendeeId_fkey" FOREIGN KEY ("attendee_id") REFERENCES "attendees" ("id") ON DELETE RESTRICT ON UPDATE CASCADE
 );
 
 CREATE UNIQUE INDEX "events_slug_key" ON "events"("slug");
